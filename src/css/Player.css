@@ -1,0 +1,33 @@
+.Player {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2.4em;
+    border-top: 1px dashed;
+}
+
+.Player:nth-child(1) {
+    transform: rotate(180deg);
+}
+
+.Player-life {
+    font-size: 3em;
+}
+
+.Player-button {
+    background-color: #FFF;
+    display: inline-block;
+    padding: 0.4em 0.8em;
+    margin: 0.4em;
+    font-size: 33px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.Player-button span {
+    position: relative;
+    top: -2px;
+}
