@@ -24,12 +24,14 @@
 .Player-button {
     background-color: #FFF;
     display: inline-block;
+    position: relative;
+    font-size: 33px;
     padding: 0.4em 0.8em;
     margin: 0.4em;
     margin-top: 0;
-    font-size: 33px;
+    width: 74px;
+    box-sizing: border-box;
     border-radius: 6px;
-    position: relative;
 }
 
 .Player-button span {
