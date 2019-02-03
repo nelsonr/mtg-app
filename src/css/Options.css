@@ -1,0 +1,31 @@
+.Options {
+  flex: 1 1 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.Options__setting {
+  text-align: center;
+}
+
+.Options__setting + .Options__setting {
+  margin-top: 30px;
+}
+
+.Options__options-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Options__confirm button {
+  width: 80%;
+  max-width: 268px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 6px;
+  margin: auto;
+  display: block;
+  background: #fff;
+}

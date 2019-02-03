@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './css/Reset.css';
+import React, { Component } from "react";
+import "../css/Reset.css";
 
 class Reset extends Component {
     render() {
@@ -7,7 +7,7 @@ class Reset extends Component {
             <div className="Reset">
                 <button onClick={this.props.onClick}>Reset</button>
             </div>
-        )
+        );
     }
 }
 

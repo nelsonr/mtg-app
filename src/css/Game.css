@@ -1,0 +1,68 @@
+.Game {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.Game__players {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+/*------ 2 Players ------*/
+
+.Game--players-2 .Player:nth-child(1) {
+  transform: rotate(180deg);
+}
+
+/*------ 3 Players ------*/
+
+.Game--players-3 .Game__players {
+  flex-direction: row;
+}
+
+.Game--players-3 .Player {
+  border-top: unset;
+  border-right: 1px dashed #fff;
+}
+
+.Game--players-3 .Player:last-child {
+  border: none;
+}
+
+.Game--players-3 .Menu {
+  top: 5%;
+  transform: translateX(-50%);
+}
+
+/*------ Menu ------*/
+
+.Menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.Menu button {
+  font-size: 1.4em;
+  line-height: 30px;
+  min-width: 60px;
+  height: 30px;
+}
+
+.Menu button + button {
+  margin-left: 20px;
+}
+
+.Menu__options-button img {
+  position: relative;
+  top: 1px;
+}

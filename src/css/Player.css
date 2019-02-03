@@ -1,40 +1,34 @@
 .Player {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 2.4em;
-    border-top: 1px dashed;
-}
-
-.Player:nth-child(1) {
-    transform: rotate(180deg);
+  flex: 1 1 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 2.4em;
+  border-top: 1px dashed;
 }
 
 .Player-name {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .Player-life {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .Player-button {
-    background-color: #FFF;
-    display: inline-block;
-    position: relative;
-    font-size: 33px;
-    padding: 0.4em 0.8em;
-    margin: 0.4em;
-    margin-top: 0;
-    width: 74px;
-    box-sizing: border-box;
-    border-radius: 6px;
-}
-
-.Player-button span {
-    position: relative;
-    top: -2px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  font-size: 33px;
+  font-family: monospace;
+  line-height: 48px;
+  width: 74px;
+  height: 74px;
+  padding: 0.4em 0.8em;
+  margin: 0.4em;
+  margin-top: 0;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
