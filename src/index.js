@@ -97,7 +97,7 @@ const playersReducer = (state = initialState, action) => {
 
         case "RESET_LIFE":
             return Object.assign({}, state, {
-                players: state.players.map((player, index) => {
+                players: state.players.map(player => {
                     player.life = state.startingLife;
 
                     return player;
