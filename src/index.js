@@ -7,22 +7,27 @@ import registerServiceWorker from "./registerServiceWorker";
 
 import "./css/index.css";
 
-const changeScreenOrientation = orientation => {
+async function changeScreenOrientation(orientation) {
     try {
-        const lockOrientationUniversal =
-            window.screen.lockOrientation ||
-            window.screen.mozLockOrientation ||
-            window.screen.msLockOrientation;
+        let requestFullScreen =
+            window.document.documentElement.requestFullscreen ||
+            window.document.documentElement.mozRequestFullScreen ||
+            window.document.documentElement.webkitRequestFullScreen ||
+            window.document.documentElement.msRequestFullscreen;
 
-        if (lockOrientationUniversal) {
-            return lockOrientationUniversal(orientation);
+        if (!document.fullscreenElement) {
+            await requestFullScreen.call(window.document.documentElement);
         }
-    } catch (error) {
-        console.log("Screen orientation not supported");
+    } catch (err) {
+        console.error(err);
     }
 
-    return false;
-};
+    await window.screen.orientation.lock(orientation).catch(reason => {
+        console.log(reason);
+    });
+
+    return true;
+}
 
 const initialState = {
     screen: "GAME",
